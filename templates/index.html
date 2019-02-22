@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial- scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scraping to Mars</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+<body class="text-black" style="background-color:rgb(231, 216, 216)" 
+background="https://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA14944_ip.jpg"      
+    <!--Jumbotron container-->
+    <body>
+        <div class="container">
+        <div class="jumbotron text-center"> style="background-image: url("https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23020_hires.jpg") backround-size 100%, height:100%;">
+            <h2 class="display-4">Scraping to Mars</h2>
+            <a class="btn btn-lg text-white" style="background-color:#a83b0c;" href="/scrape" role"button">Scrape New Data</a>
+        </div>
+        </div>
+    </body>
+     <!--Mars News container-->
+     <div class="container">
+         <h3>Latest Mars News</h3>
+         <h5 style="color: #a83b0c">{{mars_list.news_title}}   </h5>
+         <p>{{mars_list.news_p}}              </p>
+     </div>
+     <!--Mars Image container-->
+     <div class="container">
+        <div class="row">
+            <!--Big Image-->
+            <div class="col-lg-8 col-d-8 col-sm-12">
+                <h2>Featured Mars Image</h2>
+        return mars_list
+        return mars_list
+        <img src="{{mars_list.feat_img_url}}" style="max-height: auto;" alt="Mars Featured Image""
+            </div>
+
+        
+     <!--Weather Card-->
+     <div class="col-lg-4 col-md-4 col-sm-12">
+         <div class="card" style="width: 18rem;"><
+            <div class = "card-title">Current Weather on Mars</h6> 
+                <p class="card-text">{{mars_list.mars_wthr}}       </p>
+     </div>
+     </div>
+     <!--Mars Facts Table-->
+     <br>
+     <h3>Mars Facts</h3>
+     <div style="max-width: 500px; max-height:100px ; font-size: 20px; margin-bottom: 65px;">{{mars_list.mars_facts}}
+  </div>
+    </div>
+</div>
+
+</div>
+<!--Hemisphere(hemi) Cards-->
+<h2 style="padding-top: 40px; margin-top: 110px; text-align: center;">Mars hemispheres</h2>
+<div class="card-deck"
+<hr>
+<div class="col-md-12"
+<div class= "row">
+    {% for x in mars_list.hemi_img_url %}
+    <div class="col-md6">
+            <div class="card text-white bg-dark" style="margin: 40px;">
+        div class="card-img-top" src="{{x.img_url}}"/>
+        <div class="card-body">
+                <p class="card-text">{{x.title}}    </p>
+    </div>
+</div>
+</div>
+{% endfor %}  
+</div>
+</div>
+</div>    
+       
+</body>
+</html>
